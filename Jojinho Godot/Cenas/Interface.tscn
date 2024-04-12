@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp3wuqkqw41r4"]
+[gd_scene load_steps=4 format=3 uid="uid://bp3wuqkqw41r4"]
 
 [ext_resource type="Script" path="res://Scripts/Interface.gd" id="1_8lile"]
+[ext_resource type="Script" path="res://Scripts/teste.gd" id="2_txuoa"]
+[ext_resource type="Script" path="res://Scripts/Perguntas.gd" id="3_vttpk"]
 
 [node name="Interface" type="Control"]
 layout_mode = 3
@@ -36,8 +38,17 @@ layout_mode = 2
 text = "Jogar"
 
 [node name="Sair" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(0.407843, 0.776471, 1, 1)
+self_modulate = Color(0, 0.698039, 0.984314, 1)
 layout_mode = 2
 text = "Sair"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_txuoa")
+
+[node name="Perguntas" type="Node" parent="MarginContainer/VBoxContainer/Label"]
+script = ExtResource("3_vttpk")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]

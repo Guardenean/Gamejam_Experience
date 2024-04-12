@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 
-var SPEED = 300.0
+var SPEED = 350.0
 const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -26,6 +26,9 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		anim.play("Run")
+		if direction == -1:
+			anim.flip_h = true
+		else: anim.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		anim.play("Idle")
@@ -35,4 +38,4 @@ func _physics_process(delta):
 
 
 func _on_timer_timeout():
-	SPEED = 300.0
+	SPEED = 350.0
