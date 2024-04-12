@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr5p45c1slur3"]
+
+[ext_resource type="PackedScene" uid="uid://kpf03yu0pjfb" path="res://Cenas/Player.tscn" id="1_4w8ba"]
+[ext_resource type="Texture2D" uid="uid://cdus7wl16yob0" path="res://icon.svg" id="2_50amt"]
+[ext_resource type="PackedScene" uid="uid://dnpw4juylwpbq" path="res://Cenas/vel_PowerUp.tscn" id="3_8svqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gklgi"]
+size = Vector2(128.489, 142)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_4w8ba")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(534, 294)
+scale = Vector2(10.2344, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.146564, -6)
+shape = SubResource("RectangleShape2D_gklgi")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("2_50amt")
+
+[node name="PowerUp" parent="." instance=ExtResource("3_8svqs")]
+position = Vector2(723, 119)
