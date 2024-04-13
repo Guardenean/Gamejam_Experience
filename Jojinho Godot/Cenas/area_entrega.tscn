@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://nmf3gnulcyp3"]
+
+[ext_resource type="Texture2D" uid="uid://cdus7wl16yob0" path="res://icon.svg" id="1_fmw63"]
+[ext_resource type="Script" path="res://Scripts/area_entrega.gd" id="1_n6cpn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2dhk"]
+
+[node name="AreaEntrega" type="Area2D"]
+script = ExtResource("1_n6cpn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e2dhk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.27451)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fmw63")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

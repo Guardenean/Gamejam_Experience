@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://hbqw26kl57kw"]
+
+[ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_7gl3a"]
+[ext_resource type="Texture2D" uid="uid://cdus7wl16yob0" path="res://icon.svg" id="1_m05f7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
+size = Vector2(44, 44)
+
+[node name="Caixa" type="RigidBody2D" groups=["Caixas"]]
+mass = 0.5
+script = ExtResource("1_7gl3a")
+natureza = "esporte"
+topico = "atleta"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kbs3v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_m05f7")

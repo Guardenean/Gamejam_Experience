@@ -1,4 +1,5 @@
 extends Node
+class_name Perguntas
 
 var esporte = {"Pergunta1" : "Quanto foi o resultado do jogo entre Black Pegasus e os Red Titans",
 				"Pergunta2" : "Qual a opinião pública sobre o novo atacante do Basco",
@@ -20,13 +21,7 @@ var historia = {"Pergunta1" : "Quando ocorreu a primeira guerra de Karka?",
 				"Pergunta2" : "Quem foi o herói da Batalha do Campo Negro?",
 				"Pergunta3" : "Onde morreu o lider terrorista 'Kronos' ?"}
 
- 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	print(esporte["Pergunta2"])
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass
+func _get_pergunta():
+	print(esporte.Pergunta1)
+	
+	pass

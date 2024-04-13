@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://kpf03yu0pjfb"]
+[gd_scene load_steps=23 format=3 uid="uid://kpf03yu0pjfb"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7v2at"]
 [ext_resource type="Texture2D" uid="uid://dudge60575pym" path="res://bot_Anim/bot_idle.png" id="2_iuc7j"]
@@ -136,6 +136,9 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4c03a"]
+radius = 26.0
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_7v2at")
 
@@ -148,10 +151,27 @@ wait_time = 10.0
 one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_1b3a1")
-animation = &"Jump"
+animation = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+position_smoothing_speed = 4.0
+
+[node name="AreaInteract" type="Area2D" parent="."]
+position = Vector2(18, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteract"]
+shape = SubResource("CircleShape2D_4c03a")
+
+[node name="PivotBox" type="DampedSpringJoint2D" parent="."]
+rotation = 1.5708
+node_a = NodePath("..")
+node_b = NodePath("..")
+length = 2.0
+damping = 0.5
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="AreaInteract" to="." method="_on_area_interact_body_entered"]
+[connection signal="body_exited" from="AreaInteract" to="." method="_on_area_interact_body_exited"]
