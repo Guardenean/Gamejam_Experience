@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8t8ahg1ho734"]
+
+[ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_nnb6j"]
+[ext_resource type="Texture2D" uid="uid://cdus7wl16yob0" path="res://icon.svg" id="2_d6qo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
+size = Vector2(44, 44)
+
+[node name="CaixaFutebol" type="RigidBody2D" groups=["Caixas"]]
+mass = 0.5
+script = ExtResource("1_nnb6j")
+natureza = "saude"
+topico = "corpo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kbs3v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_d6qo5")

@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr5p45c1slur3"]
+[gd_scene load_steps=7 format=3 uid="uid://cr5p45c1slur3"]
 
 [ext_resource type="PackedScene" uid="uid://kpf03yu0pjfb" path="res://Cenas/Player.tscn" id="1_4w8ba"]
 [ext_resource type="Texture2D" uid="uid://cdus7wl16yob0" path="res://icon.svg" id="2_50amt"]
 [ext_resource type="PackedScene" uid="uid://dnpw4juylwpbq" path="res://Cenas/vel_PowerUp.tscn" id="3_8svqs"]
-[ext_resource type="PackedScene" uid="uid://hbqw26kl57kw" path="res://Cenas/BoxResposta.tscn" id="4_su6ui"]
 [ext_resource type="PackedScene" uid="uid://ndx7q7gmuqbr" path="res://Cenas/console.tscn" id="5_wj4vc"]
 [ext_resource type="PackedScene" uid="uid://nmf3gnulcyp3" path="res://Cenas/area_entrega.tscn" id="6_oi6lf"]
 
@@ -28,11 +27,9 @@ texture = ExtResource("2_50amt")
 [node name="PowerUp" parent="." instance=ExtResource("3_8svqs")]
 position = Vector2(1071, -73)
 
-[node name="Caixa" parent="." instance=ExtResource("4_su6ui")]
-position = Vector2(510, 203)
-
 [node name="Console" parent="." instance=ExtResource("5_wj4vc")]
 position = Vector2(699, 132)
 
-[node name="AreaEntrega" parent="." instance=ExtResource("6_oi6lf")]
+[node name="AreaEntrega" parent="." node_paths=PackedStringArray("console") instance=ExtResource("6_oi6lf")]
 position = Vector2(850, 197)
+console = NodePath("../Console")

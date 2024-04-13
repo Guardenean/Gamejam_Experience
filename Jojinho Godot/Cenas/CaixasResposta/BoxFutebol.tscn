@@ -6,11 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
 size = Vector2(44, 44)
 
-[node name="Caixa" type="RigidBody2D" groups=["Caixas"]]
+[node name="CaixaFutebol" type="RigidBody2D" groups=["Caixas"]]
 mass = 0.5
 script = ExtResource("1_7gl3a")
 natureza = "esporte"
-topico = "atleta"
+topico = "futebol"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kbs3v")

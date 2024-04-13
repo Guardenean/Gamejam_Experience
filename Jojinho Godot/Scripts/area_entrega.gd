@@ -8,5 +8,5 @@ func _on_body_entered(body):
 		timer.start()
 		await timer.timeout
 		print(body.natureza, " / ", body.topico)
-		#console._checa_resposta(body.natureza, body.topico)
+		console._checa_resposta(body.natureza, body.topico)
 		body.queue_free()
