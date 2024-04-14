@@ -1,20 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyimt10c0intb"]
+[gd_scene load_steps=4 format=3 uid="uid://dtljsswi5frhi"]
 
 [ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_gfh8t"]
-[ext_resource type="Texture2D" uid="uid://cdus7wl16yob0" path="res://icon.svg" id="2_284gh"]
+[ext_resource type="Texture2D" uid="uid://dacibxrf4hnii" path="res://Assets/Box/BoxBasquete.png" id="2_q8p1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
-size = Vector2(44, 44)
+size = Vector2(56, 56)
 
-[node name="CaixaFutebol" type="RigidBody2D" groups=["Caixas"]]
+[node name="CaixaBasquete" type="RigidBody2D" groups=["Caixas"]]
 mass = 0.5
 script = ExtResource("1_gfh8t")
 natureza = "esporte"
-topico = "esport"
+topico = "basquete"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kbs3v")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("2_284gh")
+texture = ExtResource("2_q8p1i")

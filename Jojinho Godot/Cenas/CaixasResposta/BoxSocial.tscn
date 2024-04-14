@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwdmi8tdkjfib"]
+
+[ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_i7dev"]
+[ext_resource type="Texture2D" uid="uid://b66i1ht2jw6aj" path="res://Assets/Box/BoxSocial.png" id="2_1nyv7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
+size = Vector2(56, 56)
+
+[node name="CaixaSocial" type="RigidBody2D" groups=["Caixas"]]
+mass = 0.5
+script = ExtResource("1_i7dev")
+natureza = "entretenimento"
+topico = "social"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kbs3v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_1nyv7")

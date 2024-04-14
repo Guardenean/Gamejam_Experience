@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://djfqwoc7qrva1"]
+
+[ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_r55c7"]
+[ext_resource type="Texture2D" uid="uid://bg6tqia6w6yyf" path="res://Assets/Box/BoxComida.png" id="2_hts7k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
+size = Vector2(56, 56)
+
+[node name="CaixaComida" type="RigidBody2D" groups=["Caixas"]]
+mass = 0.5
+script = ExtResource("1_r55c7")
+natureza = "compras"
+topico = "comida"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kbs3v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_hts7k")

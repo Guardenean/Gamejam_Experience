@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b07k6ijdj52an"]
+
+[ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_6iyuj"]
+[ext_resource type="Texture2D" uid="uid://da45v06qx0o86" path="res://Assets/Box/BoxMundo.png" id="2_fgbcc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
+size = Vector2(56, 56)
+
+[node name="CaixaMundo" type="RigidBody2D" groups=["Caixas"]]
+mass = 0.5
+script = ExtResource("1_6iyuj")
+natureza = "noticia"
+topico = "mundo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kbs3v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_fgbcc")

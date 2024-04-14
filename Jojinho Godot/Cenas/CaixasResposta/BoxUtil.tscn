@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0sjjtoff8yo3"]
+
+[ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_u1lyj"]
+[ext_resource type="Texture2D" uid="uid://brx1y8vcj8028" path="res://Assets/Box/BoxUtil.png" id="2_4wm6q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
+size = Vector2(56, 56)
+
+[node name="CaixaUtil" type="RigidBody2D" groups=["Caixas"]]
+mass = 0.5
+script = ExtResource("1_u1lyj")
+natureza = "compras"
+topico = "util"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kbs3v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_4wm6q")

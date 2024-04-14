@@ -3,18 +3,18 @@ class_name Perguntas
 
 const p1 : Dictionary = {
 	"natureza":"esporte",
-	"topico":"hockey",
-	"pergunta":"Qual foi o resultado do jogo entre Black Pegasus e os Red Titans"
+	"topico":"atleta",
+	"pergunta":"Tomás Gavião se aposentou do skate?"
 }
 const p2 = {
 	"natureza":"esporte",
 	"topico":"futebol",
-	"pergunta":"Qual a opinião pública sobre o novo atacante do Basco"
+	"pergunta":"Novo atacante do Basco"
 }
 const p3 = {
 	"natureza":"esporte",
-	"topico":"esport",
-	"pergunta":"Fraquengo e-sports"
+	"topico":"basquete",
+	"pergunta":"Fraquengo basquete"
 }
 const p4 = {
 	"natureza":"entretenimento",
@@ -24,7 +24,7 @@ const p4 = {
 const p5 = {
 	"natureza":"entretenimento",
 	"topico":"jogos",
-	"pergunta":"nova gamesfera será lançada em julho pela gigasoft"
+	"pergunta":"Quando vai lançar Gamesfera da Gigasoft"
 }
 const p6 = {
 	"natureza":"entretenimento",
@@ -39,12 +39,12 @@ const p7 = {
 const p8 = {
 	"natureza":"compras",
 	"topico":"util",
-	"pergunta":"Qual o novo trailer do King Konga"
+	"pergunta":"Novo IPear X35+ celular comprar"
 }
 const p9 = {
 	"natureza":"compras",
 	"topico":"comida",
-	"pergunta":"Qual o novo trailer do King Konga"
+	"pergunta":"Onde tem X-Tudão?"
 }
 const p10 = {
 	"natureza":"noticias",
@@ -58,7 +58,7 @@ const p11 = {
 }
 const p12 = {
 	"natureza":"noticias",
-	"topico":"cinema",
+	"topico":"politica",
 	"pergunta":"Quem foi o responsável pela morte do ministro Hector Salamandro?"
 }
 const p13 = {

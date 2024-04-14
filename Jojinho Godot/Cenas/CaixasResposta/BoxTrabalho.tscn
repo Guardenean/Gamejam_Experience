@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5uhjy8c52te4"]
+
+[ext_resource type="Script" path="res://Scripts/CaixaResposta.gd" id="1_mq0cd"]
+[ext_resource type="Texture2D" uid="uid://d0wovbx6eassh" path="res://Assets/Box/BoxTrabalho.png" id="2_ikbbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbs3v"]
+size = Vector2(56, 56)
+
+[node name="CaixaTrabalho" type="RigidBody2D" groups=["Caixas"]]
+mass = 0.5
+script = ExtResource("1_mq0cd")
+natureza = "noticia"
+topico = "trabalho"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kbs3v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_ikbbl")
