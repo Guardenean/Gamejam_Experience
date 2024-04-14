@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cr5p45c1slur3"]
+[gd_scene load_steps=23 format=3 uid="uid://cr5p45c1slur3"]
 
 [ext_resource type="PackedScene" uid="uid://kpf03yu0pjfb" path="res://Cenas/Player.tscn" id="1_4w8ba"]
 [ext_resource type="Texture2D" uid="uid://cdus7wl16yob0" path="res://icon.svg" id="2_50amt"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://djh4keq4epp47" path="res://Cenas/CaixasResposta/BoxMente.tscn" id="18_h8mcy"]
 [ext_resource type="PackedScene" uid="uid://brnl2v2i1xsee" path="res://Cenas/CaixasResposta/BoxCorpo.tscn" id="19_h1lvp"]
 [ext_resource type="PackedScene" uid="uid://ctwecti0crjoj" path="res://Cenas/CaixasResposta/BoxRemedio.tscn" id="20_f0lav"]
+[ext_resource type="PackedScene" uid="uid://vpvey7l38lts" path="res://Cenas/Super_PowerUp.tscn" id="21_bxj6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gklgi"]
 size = Vector2(128.489, 126)
@@ -49,47 +50,52 @@ position = Vector2(699, 132)
 position = Vector2(1085, 197)
 console = NodePath("../Console")
 
-[node name="CaixaAtleta" parent="." instance=ExtResource("6_borle")]
+[node name="Caixas" type="Node" parent="."]
+
+[node name="CaixaAtleta" parent="Caixas" instance=ExtResource("6_borle")]
 position = Vector2(-72, 192)
 
-[node name="CaixaBasquete" parent="." instance=ExtResource("7_401ob")]
+[node name="CaixaBasquete" parent="Caixas" instance=ExtResource("7_401ob")]
 position = Vector2(7, 196)
 
-[node name="CaixaFutebol" parent="." instance=ExtResource("4_su6ui")]
+[node name="CaixaFutebol" parent="Caixas" instance=ExtResource("4_su6ui")]
 position = Vector2(92, 195)
 
-[node name="CaixaCinema" parent="." instance=ExtResource("9_bhqed")]
+[node name="CaixaCinema" parent="Caixas" instance=ExtResource("9_bhqed")]
 position = Vector2(170, 196)
 
-[node name="CaixaJogos" parent="." instance=ExtResource("10_qqufr")]
+[node name="CaixaJogos" parent="Caixas" instance=ExtResource("10_qqufr")]
 position = Vector2(247, 196)
 
-[node name="CaixaSocial" parent="." instance=ExtResource("11_i1ekl")]
+[node name="CaixaSocial" parent="Caixas" instance=ExtResource("11_i1ekl")]
 position = Vector2(322, 197)
 
-[node name="CaixaMundo" parent="." instance=ExtResource("12_s4h5o")]
+[node name="CaixaMundo" parent="Caixas" instance=ExtResource("12_s4h5o")]
 position = Vector2(396, 195)
 
-[node name="CaixaPolitica" parent="." instance=ExtResource("13_0uwoe")]
+[node name="CaixaPolitica" parent="Caixas" instance=ExtResource("13_0uwoe")]
 position = Vector2(470, 195)
 
-[node name="CaixaTrabalho" parent="." instance=ExtResource("14_c4mba")]
+[node name="CaixaTrabalho" parent="Caixas" instance=ExtResource("14_c4mba")]
 position = Vector2(539, 194)
 
-[node name="CaixaUtil" parent="." instance=ExtResource("15_4ybgf")]
+[node name="CaixaUtil" parent="Caixas" instance=ExtResource("15_4ybgf")]
 position = Vector2(613, 194)
 
-[node name="CaixaModa" parent="." instance=ExtResource("16_y2b2e")]
+[node name="CaixaModa" parent="Caixas" instance=ExtResource("16_y2b2e")]
 position = Vector2(689, 194)
 
-[node name="CaixaComida" parent="." instance=ExtResource("17_42jt7")]
+[node name="CaixaComida" parent="Caixas" instance=ExtResource("17_42jt7")]
 position = Vector2(762, 193)
 
-[node name="CaixaMente" parent="." instance=ExtResource("18_h8mcy")]
+[node name="CaixaMente" parent="Caixas" instance=ExtResource("18_h8mcy")]
 position = Vector2(830, 191)
 
-[node name="CaixaCorpo" parent="." instance=ExtResource("19_h1lvp")]
+[node name="CaixaCorpo" parent="Caixas" instance=ExtResource("19_h1lvp")]
 position = Vector2(899, 190)
 
-[node name="CaixaRemedio" parent="." instance=ExtResource("20_f0lav")]
+[node name="CaixaRemedio" parent="Caixas" instance=ExtResource("20_f0lav")]
 position = Vector2(969, 190)
+
+[node name="PowerUp2" parent="." instance=ExtResource("21_bxj6t")]
+position = Vector2(1288, 151)

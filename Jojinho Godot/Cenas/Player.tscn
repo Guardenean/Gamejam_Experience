@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://kpf03yu0pjfb"]
+[gd_scene load_steps=24 format=3 uid="uid://kpf03yu0pjfb"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7v2at"]
 [ext_resource type="Texture2D" uid="uid://dudge60575pym" path="res://bot_Anim/bot_idle.png" id="2_iuc7j"]
+[ext_resource type="PackedScene" uid="uid://bwjnmwgkex5u" path="res://Cenas/Afterimage.tscn" id="2_q0idj"]
 [ext_resource type="Texture2D" uid="uid://chupdenwyiede" path="res://bot_Anim/bot_Jump.png" id="3_f81l1"]
 [ext_resource type="Texture2D" uid="uid://crdaf10qhrxbw" path="res://bot_Anim/bot_Run.png" id="4_44lnf"]
 
@@ -141,6 +142,7 @@ radius = 26.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_7v2at")
+ghost_node = ExtResource("2_q0idj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 7.5)
@@ -149,6 +151,12 @@ shape = SubResource("RectangleShape2D_xke7v")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[node name="SuperTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="GhostTimer" type="Timer" parent="."]
+wait_time = 0.05
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
@@ -173,5 +181,7 @@ length = 2.0
 damping = 0.5
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SuperTimer" to="." method="_on_super_timer_timeout"]
+[connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="body_entered" from="AreaInteract" to="." method="_on_area_interact_body_entered"]
 [connection signal="body_exited" from="AreaInteract" to="." method="_on_area_interact_body_exited"]

@@ -47,7 +47,7 @@ const p9 = {
 	"pergunta":"Onde tem X-Tudão?"
 }
 const p10 = {
-	"natureza":"noticias",
+	"natureza":"noticia",
 	"topico":"trabalho",
 	"pergunta":"Montadora Tiguer Motors troca empregados por máquinas"
 }
