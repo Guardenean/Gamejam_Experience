@@ -44,7 +44,7 @@ texture = ExtResource("2_50amt")
 position = Vector2(1071, -73)
 
 [node name="Console" parent="." instance=ExtResource("5_wj4vc")]
-position = Vector2(699, 132)
+position = Vector2(-47, -421)
 
 [node name="AreaEntrega" parent="." node_paths=PackedStringArray("console") instance=ExtResource("6_oi6lf")]
 position = Vector2(1085, 197)
