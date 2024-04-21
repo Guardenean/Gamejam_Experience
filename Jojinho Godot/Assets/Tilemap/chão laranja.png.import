@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4yn5k4ehyct3"
-path="res://.godot/imported/MainMenu.png-f320a2b8d49374f4d2bce674b6081ce8.ctex"
+uid="uid://c7qmhrsg3wdnx"
+path="res://.godot/imported/chão laranja.png-addd64881e0cbb4d54117f77b28437e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/MainMenu.png"
-dest_files=["res://.godot/imported/MainMenu.png-f320a2b8d49374f4d2bce674b6081ce8.ctex"]
+source_file="res://Assets/Tilemap/chão laranja.png"
+dest_files=["res://.godot/imported/chão laranja.png-addd64881e0cbb4d54117f77b28437e8.ctex"]
 
 [params]
 

@@ -4,77 +4,77 @@ class_name Perguntas
 const p1 : Dictionary = {
 	"natureza":"esporte",
 	"topico":"atleta",
-	"pergunta":"Tomás Gavião se aposentou do skate?"
+	"pergunta":"TOMÁS GAVIÃO SE APOSENTOU DO SKATE?"
 }
 const p2 = {
 	"natureza":"esporte",
 	"topico":"futebol",
-	"pergunta":"Novo atacante do Basco"
+	"pergunta":"NOVO ATACANTE DO BASCO"
 }
 const p3 = {
 	"natureza":"esporte",
 	"topico":"basquete",
-	"pergunta":"Fraquengo basquete"
+	"pergunta":"FRAQUENGO BASQUETE"
 }
 const p4 = {
 	"natureza":"entretenimento",
 	"topico":"social",
-	"pergunta":"Dancinhas para parar a guerra de Ninius"
+	"pergunta":"DANCINHAS PARA PARAR A GUERRA DE NINIUS"
 }
 const p5 = {
 	"natureza":"entretenimento",
 	"topico":"jogos",
-	"pergunta":"Quando vai lançar Gamesfera da Gigasoft"
+	"pergunta":"QUANDO VAI LANÇAR GAMESFERA DA GIGASOFT"
 }
 const p6 = {
 	"natureza":"entretenimento",
 	"topico":"cinema",
-	"pergunta":"Qual o novo trailer do King Konga"
+	"pergunta":"QUAL O NOVO TRAILER DO KING KONGA"
 }
 const p7 = {
 	"natureza":"compras",
 	"topico":"moda",
-	"pergunta":"Nova linha de inverno da Snake Head"
+	"pergunta":"NOVA LINHA DE INVERNO DA SNAKE HEAD"
 }
 const p8 = {
 	"natureza":"compras",
 	"topico":"util",
-	"pergunta":"Novo IPear X35+ celular comprar"
+	"pergunta":"NOVO IPEAR X35+ CELULAR COMPRAR"
 }
 const p9 = {
 	"natureza":"compras",
 	"topico":"comida",
-	"pergunta":"Onde tem X-Tudão?"
+	"pergunta":"ONDE TEM X-TUDÃO?"
 }
 const p10 = {
 	"natureza":"noticia",
 	"topico":"trabalho",
-	"pergunta":"Montadora Tiguer Motors troca empregados por máquinas"
+	"pergunta":"TIGUER MOTORS TROCA EMPREGADOS POR MÁQUINAS"
 }
 const p11 = {
 	"natureza":"noticias",
 	"topico":"mundo",
-	"pergunta":"Karka declarou guerra contra Ninius"
+	"pergunta":"KARKA DECLAROU GUERRA CONTRA NINIUS"
 }
 const p12 = {
 	"natureza":"noticias",
 	"topico":"politica",
-	"pergunta":"Quem foi o responsável pela morte do ministro Hector Salamandro?"
+	"pergunta":"RESPONSÁVEL PELA MORTE DO MINISTRO HECTOR SALAMANDRO?"
 }
 const p13 = {
 	"natureza":"saude",
 	"topico":"corpo",
-	"pergunta":"Como emagrecer rápido"
+	"pergunta":"COMO EMAGRECER RÁPIDO"
 }
 const p14 = {
 	"natureza":"saude",
 	"topico":"mente",
-	"pergunta":"Posso ter depressão por rede social?"
+	"pergunta":"POSSO TER DEPRESSÃO POR REDE SOCIAL?"
 }
 const p15 = {
 	"natureza":"saude",
 	"topico":"remedio",
-	"pergunta":"Anticoncepcional onde comprar"
+	"pergunta":"ANTICONCEPCIONAL ONDE COMPRAR"
 }
 
 const  perguntas = {
@@ -102,3 +102,6 @@ func _get_pergunta():
 	var resp = array[num]
 	array.remove_at(num)
 	return resp
+	
+func _get_array_count():
+	return array.size()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gicw626cll0r"
-path="res://.godot/imported/Vida.png-6710ccf3da6dea7f14846fd664adc9cd.ctex"
+uid="uid://y5tftd8danaj"
+path="res://.godot/imported/green ground.png-0854719eae9de407be25834acc968d2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Console/Vida.png"
-dest_files=["res://.godot/imported/Vida.png-6710ccf3da6dea7f14846fd664adc9cd.ctex"]
+source_file="res://Assets/Tilemap/green ground.png"
+dest_files=["res://.godot/imported/green ground.png-0854719eae9de407be25834acc968d2c.ctex"]
 
 [params]
 

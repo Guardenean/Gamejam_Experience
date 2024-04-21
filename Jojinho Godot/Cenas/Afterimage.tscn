@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwjnmwgkex5u"]
 
-[ext_resource type="Texture2D" uid="uid://dudge60575pym" path="res://bot_Anim/bot_idle.png" id="1_wenmf"]
+[ext_resource type="Texture2D" uid="uid://b7s3bdb8wcmrj" path="res://bot_Anim/bot_SUPER.png" id="1_x1x73"]
 [ext_resource type="Script" path="res://Scripts/Afterimage.gd" id="2_c1kir"]
 
 [node name="Sprite2D" type="Sprite2D"]
-texture = ExtResource("1_wenmf")
-hframes = 3
+texture = ExtResource("1_x1x73")
+vframes = 5
 script = ExtResource("2_c1kir")

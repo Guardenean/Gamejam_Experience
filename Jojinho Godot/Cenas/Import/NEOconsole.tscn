@@ -1,0 +1,195 @@
+[gd_scene load_steps=10 format=3 uid="uid://ndx7q7gmuqbr"]
+
+[ext_resource type="Script" path="res://Scripts/Console.gd" id="1_i217m"]
+[ext_resource type="Script" path="res://Scripts/Perguntas.gd" id="2_80d30"]
+[ext_resource type="Texture2D" uid="uid://c2rp2fex8dglv" path="res://Assets/Console.png" id="2_r3eq2"]
+[ext_resource type="FontFile" uid="uid://ce0nsylosspu" path="res://Assets/Fonte/Pixeled.ttf" id="4_2mpr0"]
+[ext_resource type="Texture2D" uid="uid://dhqktq7gltnob" path="res://Assets/vida.png" id="4_7ki4s"]
+[ext_resource type="AudioStream" uid="uid://d3twcyoqi703b" path="res://Assets/Sons/Resposta_Correta.wav" id="6_371pm"]
+[ext_resource type="AudioStream" uid="uid://c4s1pkyua7p26" path="res://Assets/Sons/incorreto_Som.wav" id="7_5pava"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n350s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_vok2t"]
+Panel/styles/panel = SubResource("StyleBoxFlat_n350s")
+
+[node name="Console" type="Node2D" node_paths=PackedStringArray("pergunta")]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_i217m")
+pergunta = NodePath("Perguntas")
+
+[node name="Console" type="MarginContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 651.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Console"]
+position = Vector2(574.5, 325.75)
+scale = Vector2(5, 5)
+texture = ExtResource("2_r3eq2")
+
+[node name="Perguntas" type="Node" parent="."]
+script = ExtResource("2_80d30")
+
+[node name="Pontos" type="MarginContainer" parent="."]
+offset_left = 575.0
+offset_top = 265.0
+offset_right = 773.0
+offset_bottom = 311.0
+
+[node name="Label" type="Label" parent="Pontos"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_2mpr0")
+text = "PONTOS"
+horizontal_alignment = 1
+
+[node name="Energia" type="MarginContainer" parent="."]
+offset_left = 30.0
+offset_top = 262.0
+offset_right = 228.0
+offset_bottom = 308.0
+
+[node name="Label" type="Label" parent="Energia"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_2mpr0")
+text = "ENERGIA"
+horizontal_alignment = 1
+
+[node name="Pesquisas" type="MarginContainer" parent="."]
+offset_left = 25.0
+offset_top = 46.0
+offset_right = 223.0
+offset_bottom = 92.0
+
+[node name="Label" type="Label" parent="Pesquisas"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_2mpr0")
+text = "PESQUISAS"
+horizontal_alignment = 1
+
+[node name="MPontuacao" type="MarginContainer" parent="."]
+offset_left = 625.0
+offset_top = 255.0
+offset_right = 1066.0
+offset_bottom = 389.0
+theme_override_constants/margin_top = 50
+
+[node name="Pontuacao" type="Label" parent="MPontuacao"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_2mpr0")
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="Tentativas" type="MarginContainer" parent="."]
+offset_left = 170.0
+offset_top = 320.0
+offset_right = 533.0
+offset_bottom = 405.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Htentativas" type="HBoxContainer" parent="Tentativas"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Vida1" type="BoxContainer" parent="Tentativas/Htentativas"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Tentativas/Htentativas/Vida1"]
+position = Vector2(-1, -1)
+texture = ExtResource("4_7ki4s")
+centered = false
+metadata/_edit_group_ = true
+
+[node name="Vida2" type="BoxContainer" parent="Tentativas/Htentativas"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Tentativas/Htentativas/Vida2"]
+position = Vector2(-1, -1)
+texture = ExtResource("4_7ki4s")
+centered = false
+metadata/_edit_group_ = true
+
+[node name="Vida3" type="BoxContainer" parent="Tentativas/Htentativas"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Tentativas/Htentativas/Vida3"]
+position = Vector2(-1, -1)
+texture = ExtResource("4_7ki4s")
+centered = false
+metadata/_edit_group_ = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TimerText" type="Label" parent="."]
+offset_left = 955.0
+offset_top = 40.0
+offset_right = 1065.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("4_2mpr0")
+theme_override_font_sizes/font_size = 25
+text = "00:00"
+
+[node name="TimerJogo" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 89.0
+offset_top = 44.0
+offset_right = 1060.0
+offset_bottom = 219.0
+theme = SubResource("Theme_vok2t")
+
+[node name="MPrincipal" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -520.0
+offset_top = -86.5
+offset_right = 520.0
+offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Status" type="Label" parent="Panel/MPrincipal"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("4_2mpr0")
+theme_override_font_sizes/font_size = 15
+text = "AGUARDANDO RESPOSTA..."
+
+[node name="Pesquisa" type="Label" parent="Panel/MPrincipal"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+size_flags_stretch_ratio = 10.05
+theme_override_fonts/font = ExtResource("4_2mpr0")
+theme_override_font_sizes/font_size = 20
+text = "AHAHAHAHAHAHAHAHAHAHAHAHAHAHAHHDSFDSFDSFDSFASFDASGFDSFDSFS"
+vertical_alignment = 1
+max_lines_visible = 14
+visible_characters = 52
+visible_ratio = 0.913793
+
+[node name="SFX_Correto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_371pm")
+
+[node name="SFX_Errado" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_5pava")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="ready" from="TimerJogo" to="." method="_on_timer_jogo_ready"]
+[connection signal="timeout" from="TimerJogo" to="." method="_on_timer_jogo_timeout"]
